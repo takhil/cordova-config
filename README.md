@@ -9,7 +9,7 @@
 ## Install
 
 ```
-npm install --save cordova-config
+npm install --save ionic-cordova-config
 ```
 
 
