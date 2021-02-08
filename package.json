@@ -1,12 +1,12 @@
 {
-  "name": "cordova-config",
+  "name": "ionic-cordova-config",
   "version": "0.7.0",
-  "description": "Parse and edit the config.xml file of a cordova project",
+  "description": "Parse and edit the config.xml file of a ionic cordova project",
   "license": "MIT",
-  "repository": "SamVerschueren/cordova-config",
+  "repository": "takhil/cordova-config",
   "author": {
-    "name": "Sam Verschueren",
-    "email": "sam.verschueren@gmail.com"
+    "name": "Akhil",
+    "email": "takhil143@gmail.com"
   },
   "main": "index.js",
   "engines": {
