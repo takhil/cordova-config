@@ -1,4 +1,4 @@
-# cordova-config
+# ionic-cordova-config
 
 [![Build Status](https://travis-ci.org/SamVerschueren/cordova-config.svg?branch=master)](https://travis-ci.org/SamVerschueren/cordova-config)
 [![Coverage Status](https://coveralls.io/repos/SamVerschueren/cordova-config/badge.svg?branch=master&service=github)](https://coveralls.io/github/SamVerschueren/cordova-config?branch=master)
