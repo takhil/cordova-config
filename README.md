@@ -22,7 +22,7 @@ const Config = require('cordova-config');
 const config = new Config('config.xml');
 config.setName('My application');
 config.setDescription('This is the description of my application');
-config.setAuthor('Sam Verschueren', 'sam.verschueren@gmail.com', 'https://github.com/SamVerschueren');
+config.setAuthor('Akhil', 'takhil43@gmail.com', 'https://github.com/takhil');
 
 // Write the config file
 config.writeSync();
