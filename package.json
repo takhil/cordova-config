@@ -1,6 +1,6 @@
 {
   "name": "ionic-cordova-config",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Parse and edit the config.xml file of a ionic cordova project",
   "license": "MIT",
   "repository": "takhil/cordova-config",
