@@ -3,7 +3,7 @@
 /**
  * This module represents the config.xml file.
  *
- * @author Sam Verschueren		<sam.verschueren@gmail.com>
+ * @author Akhil Tirumalasetty		<takhil143@gmail.com>
  * @since  20 May 2015
  */
 
@@ -70,12 +70,19 @@ module.exports = (function () {
 	};
 
 	/**
-	 * Sets the name tag of the config.xml file.
+	 * Sets the app name and display name tag of the config.xml file.
 	 *
-	 * @param {string}	name		The name of the config.xml name tag.
+	 * @param {string}  name    The name of the config.xml name tag.
 	 */
-	Config.prototype.setName = function (name) {
-		this.setElement('name', name);
+	Config.prototype.setName = function (name, displayName) {
+
+		var attribs = {};
+
+		if (displayName) {
+			attribs.short = displayName;
+		}
+
+		this.setElement('name', name, attribs);
 	};
 
 	/**
@@ -151,12 +158,12 @@ module.exports = (function () {
 	 */
 	Config.prototype.setVersion = function (version) {
 		// TODO:Commenting this to allow the version like 1.2.3.4+xx.999 etc
-// 		var regex = new RegExp('^[0-9]+.[0-9]+.[0-9]+$');
+		// 		var regex = new RegExp('^[0-9]+.[0-9]+.[0-9]+$');
 
-// 		if (!regex.test(version)) {
-// 			// If the version is not valid, throw an error.
-// 			throw new Error('Please provide a valid version number.');
-// 		}
+		// 		if (!regex.test(version)) {
+		// 			// If the version is not valid, throw an error.
+		// 			throw new Error('Please provide a valid version number.');
+		// 		}
 
 		// Set the version of the widget tag
 		this._root.attrib.version = version;
@@ -355,14 +362,14 @@ module.exports = (function () {
 	 * @returns {Promise}			A promise that resolves when the file is written.
 	 */
 	Config.prototype.write = function () {
-		return pify(fs.writeFile, Promise)(this._file, this._doc.write({indent: 4}), 'utf8');
+		return pify(fs.writeFile, Promise)(this._file, this._doc.write({ indent: 4 }), 'utf8');
 	};
 
 	/**
 	 * The same as `write` but sync.
 	 */
 	Config.prototype.writeSync = function () {
-		fs.writeFileSync(this._file, this._doc.write({indent: 4}), 'utf-8');
+		fs.writeFileSync(this._file, this._doc.write({ indent: 4 }), 'utf-8');
 	};
 
 	return Config;
